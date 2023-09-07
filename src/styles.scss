@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/material-override.scss";
+
+:root {
+  --padding: 24px;
+}
 
 html,
 body {
@@ -14,4 +19,18 @@ body {
   border: 0 solid #d9dee3;
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.form-field-row {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+
+  .column {
+    flex: 1;
+  }
 }

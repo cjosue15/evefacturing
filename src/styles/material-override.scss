@@ -1,0 +1,69 @@
+// mat: form field;
+
+$large: 48px;
+$original-padding: 16px;
+$original-height: 56px;
+$original-top: 28px;
+$original-float-top: -34.75px;
+
+@function gap($variant) {
+  @return calc(($original-height - $variant) / 2);
+}
+
+@mixin calculatePadding($variant: $large) {
+  padding-top: $original-padding - gap($variant);
+  padding-bottom: $original-padding - gap($variant);
+}
+
+@mixin calculateTop($variant: $large) {
+  top: $original-top - gap($variant);
+}
+
+@mixin calculateTranslateY($variant: $large) {
+  $top: $original-float-top + gap($variant);
+  --mat-mdc-form-field-label-transform: translateY(#{$top})
+    scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+}
+
+@mixin inputFontSize($font-size: 16px, $line-height: 24px) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.mat-mdc-form-field {
+  &.mat-mdc-form-field-has-icon-prefix {
+    .mat-mdc-form-field-infix {
+      width: 160px;
+    }
+  }
+  .mat-mdc-text-field-wrapper {
+    .mat-mdc-form-field-flex {
+      .mat-mdc-form-field-infix {
+        @include calculatePadding();
+        min-height: $large;
+
+        .t1-mdc-input-element {
+          @include inputFontSize();
+        }
+      }
+
+      .mat-mdc-floating-label {
+        @include calculateTop();
+        @include inputFontSize();
+
+        &.mdc-floating-label--float-above {
+          @include calculateTranslateY();
+        }
+      }
+    }
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    .mat-mdc-form-field-hint-wrapper mat-hint.mat-mdc-form-field-hint,
+    .mat-mdc-form-field-error-wrapper mat-error.mat-mdc-form-field-error {
+      @include inputFontSize(14px, 20px);
+    }
+  }
+}
