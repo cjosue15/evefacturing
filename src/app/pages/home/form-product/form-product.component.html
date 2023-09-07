@@ -1,0 +1,98 @@
+<h4 class="py-3 mb-4">
+  <span class="text-muted fw-light">Lista de Productos / </span
+  ><span>Agregar</span>
+</h4>
+
+<div class="form-product">
+  <div class="form-product__wrapper">
+    <div class="product-information">
+      <mat-card>
+        <mat-card-title>
+          <h4>Informacion del producto</h4>
+        </mat-card-title>
+        <mat-card-content>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Nombre del producto</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+          <div class="form-field-row">
+            <div class="column">
+              <mat-form-field>
+                <mat-label>SKU</mat-label>
+                <input type="text" matInput />
+              </mat-form-field>
+            </div>
+            <div class="column">
+              <mat-form-field>
+                <mat-label>Stock</mat-label>
+                <input type="number" matInput />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Descripcion</mat-label>
+              <textarea rows="6" type="text" matInput></textarea>
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="product-pricing">
+      <mat-card>
+        <mat-card-title>
+          <h4>Precio</h4>
+        </mat-card-title>
+        <mat-card-content>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Precio base</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Precio de descuento</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+
+          <mat-divider />
+
+          <div class="form-field-row slide-toggle-stock">
+            <span>En stock</span>
+            <mat-slide-toggle />
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="product-organize">
+      <mat-card>
+        <mat-card-title><h4>Organizar</h4></mat-card-title>
+        <mat-card-content>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Categoria</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Status</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+          <div class="form-field-row">
+            <mat-form-field>
+              <mat-label>Tags</mat-label>
+              <input type="text" matInput />
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

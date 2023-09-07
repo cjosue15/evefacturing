@@ -1,0 +1,56 @@
+.form-product {
+  &__wrapper {
+    display: grid;
+    gap: 24px;
+    grid-template-areas:
+      "a a b"
+      "a a c";
+
+    .product {
+      &-information {
+        grid-area: a;
+      }
+
+      &-pricing {
+        grid-area: b;
+      }
+
+      &-organize {
+        grid-area: c;
+      }
+    }
+  }
+
+  .mat-mdc-card {
+    .mat-mdc-card-title {
+      padding: var(--padding);
+
+      h5 {
+        margin-bottom: 0;
+      }
+    }
+
+    .mat-mdc-card-content {
+      padding: 0 var(--padding) var(--padding);
+
+      .form-field-row {
+        padding-bottom: var(--padding);
+        .mat-mdc-form-field {
+          width: 100%;
+        }
+
+        &.slide-toggle-stock {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 24px;
+          padding-bottom: 0;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
