@@ -12,4 +12,4 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent {}
+export default class LayoutComponent {}
